@@ -1,0 +1,146 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu,
+.socialList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ------ burger ------*/
+
+.burgerBtn {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+    top: 10px;
+}
+
+.div1,
+.div2,
+.div3 {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* .change .div1{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .div2 {
+    opacity: 0;
+}
+
+.change .div3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+} */
+
+.logo {
+    text-align: center;
+    font-family: 'Srisakdi', cursive;
+    /* font-family: 'Raleway', sans-serif;
+    font-family: 'Thasadith', sans-serif;
+    font-family: 'Cormorant Garamond', serif; */
+}
+
+.logo span {
+    background-color: rgb(238, 209, 209);
+    font-family: 'Cormorant Garamond', serif;
+    padding: 0 10px;
+}
+
+/* ------ sideMenu ------ */
+
+ .sideMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: #1A2124;
+	min-height: 100%;
+	font-weight:300;
+	font-size:14px;
+	position: fixed;
+	top:0;
+	left:-250px;
+    width:250px;
+	height:100%;
+	overflow: hidden;
+	overflow-y:auto;
+	color:#42505A;
+	-webkit-transition: 0.5s left;
+	-moz-transition: 0.5s left;
+	-ms-transition: 0.5s left;
+	-o-transition: 0.5s left;
+	transition: 0.5s left;
+}
+
+.menu {
+    padding: 0;
+    margin: auto 0;
+}
+
+.menu li {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color:rgb(238, 209, 209);
+}
+
+.socialList{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.socialList li {
+    margin: 10px;
+}
+
+.socialList i{
+    color:rgb(238, 209, 209);
+    cursor: pointer;
+}
+
+.showMenu {
+    left: 0;
+}
+
+@media screen and (max-width: 767px){
+    .sideMenu {
+        height: calc (100% - 80px);
+        width: 100%;
+        left: -500px;
+    }
+
+    .showMenu {
+        left: 0;
+        top: 30;
+    }
+
+    .whiteBtn {
+        background-color: #fff;
+    }
+}
