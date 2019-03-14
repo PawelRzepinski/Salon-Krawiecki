@@ -3,11 +3,22 @@
     margin: 0 auto;
 }
 
+.sectionTitle{
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
 
 .nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 50px 0;
 }
 
 .menu,
@@ -24,8 +35,8 @@
     cursor: pointer;
     position: fixed;
     z-index: 1000;
-    right: 10px;
-    top: 10px;
+    right: 50px;
+    top: 50px;
 }
 
 .div1,
@@ -143,4 +154,17 @@
     .whiteBtn {
         background-color: #fff;
     }
+}
+
+/* ------ about ------ */
+
+.aboutFoto {
+    background-image: url(img/about-section.jpg);
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 54vh;
+    max-height: 1200px;
+    min-height: 200px;
 }
