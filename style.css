@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -72,6 +78,7 @@ section {
 .logo {
     text-align: center;
     font-family: 'Srisakdi', cursive;
+    font-size: 1.5em;
     /* font-family: 'Raleway', sans-serif;
     font-family: 'Thasadith', sans-serif;
     font-family: 'Cormorant Garamond', serif; */
@@ -80,6 +87,7 @@ section {
 .logo span {
     background-color: rgb(238, 209, 209);
     font-family: 'Cormorant Garamond', serif;
+    font-size: 0.6em;
     padding: 0 10px;
 }
 
@@ -149,7 +157,8 @@ section {
 /* ------ about ------ */
 
 .aboutFoto,
-.offerFoto {
+.offerFoto,
+.priceFoto {
     
     background-attachment: fixed;
     background-position: 50% 0;
@@ -184,7 +193,7 @@ section {
     width: 30%;
     min-width: 200px;
     margin: 0 50px;
-    border: 1px solid rgb(238, 209, 209);
+    border: 2px solid rgb(238, 209, 209);
     box-shadow: 10px 10px 40px 0px rgba(238, 209, 209,0.75);
 }
 
@@ -220,13 +229,13 @@ section {
 
 .tableName {
     width: 500px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 .tablePrice {
     width:200px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -234,12 +243,45 @@ section {
     margin-bottom: 30px;
 }
 
+.table span{
+    color: rgb(238, 209, 209);
+}
+
+tr {
+    border: 1px;
+}
+
+/* ------ contact ------ */
+
+.contactContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactInfo ul{
+    list-style: none;
+}
+
+.contactInfo li{
+    margin: 40px;
+}
+
+/* ------ footer ------ */
+
+footer{
+    padding: 50px;
+    background-color: #1A2124;
+    color: rgb(238, 209, 209);
+    text-align: center;
+}
 
 
-
-
-
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1024px){
     .offerLabels {
         flex-direction: column;
         justify-content: center;
@@ -250,6 +292,20 @@ section {
     .label {
         width: 80%;
         margin-bottom: 60px;
+    }
+
+    .contactContent {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contactInfo{
+        margin-top: 60px;
+    }
+
+    .burgerBtn {
+        right: 20px;
+        top: 20px;
     }
 }
 
@@ -269,8 +325,5 @@ section {
         background-color: #fff;
     }
 
-    .burgerBtn {
-        right: 20px;
-        top: 20px;
-    }
+    
 }
