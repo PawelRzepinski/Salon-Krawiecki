@@ -1,16 +1,23 @@
 const burgerBtn = document.querySelector(".burgerBtn");
 const burgerDivs = document.querySelectorAll(".burgerBtn div");
 const menu = document.querySelector(".sideMenu");
+const $menuLinks = $(".menu a");
 
-console.log(burgerDivs);
+console.log($menuLinks);
 
+
+function toggleMenu () {
+    menu.classList.toggle("showMenu");
+}
 
 burgerBtn.addEventListener("click",function(){
-    menu.classList.toggle("showMenu");
+    toggleMenu();
     burgerDivs.forEach(function(x){
         x.classList.toggle("whiteBtn");
     })
 });
+
+
 
 
 var images = [].slice.call(document.querySelectorAll('.js-parallax-bg'));
@@ -49,4 +56,26 @@ function doParallax() {
     }
 }
 
-console.log(window.location.hash);
+
+//  płynne przewijanie do kotwicy jQuery
+$(function(){
+
+    $menuLinks.on("click", toggleMenu);
+
+    function scroll(e) {
+
+        var href = $(this).attr('href');
+    
+        e.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 800);
+    
+        location.hash = href;
+    
+    };
+    
+    $('a[href^="#"]').click(scroll);
+
+})
