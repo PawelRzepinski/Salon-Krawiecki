@@ -49,4 +49,4 @@ function doParallax() {
     }
 }
 
-// Gator(window).on('scroll', doParallax);
+console.log(window.location.hash);

@@ -254,9 +254,18 @@ section {
     color: rgb(238, 209, 209);
 }
 
-tr {
-    border: 1px;
+table{
+    border-collapse:collapse;
 }
+
+.trBorder {
+    border-bottom: 2px solid rgb(238, 209, 209);
+}
+
+.trBorder:last-child {
+    border: none;
+}
+
 
 /* ------ contact ------ */
 
@@ -266,16 +275,16 @@ tr {
 }
 
 .contactInfo{
+    width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-.contactInfo ul{
-    list-style: none;
+    align-items: center;
 }
 
-.contactInfo li{
-    margin: 40px;
+
+.contactTable td {
+    font-size: 20px;
+    padding: 10px;
 }
 
 /* ------ footer ------ */
@@ -340,3 +349,8 @@ footer{
 
     
 }
+
+
+html {
+    scroll-behavior: smooth;
+  }
