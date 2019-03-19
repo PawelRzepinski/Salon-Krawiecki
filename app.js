@@ -2,8 +2,9 @@ const burgerBtn = document.querySelector(".burgerBtn");
 const burgerDivs = document.querySelectorAll(".burgerBtn div");
 const menu = document.querySelector(".sideMenu");
 const $menuLinks = $(".menu a");
+const gallery = document.querySelectorAll(".sliderActive li");
 
-console.log($menuLinks);
+console.log(gallery);
 
 
 function toggleMenu () {
